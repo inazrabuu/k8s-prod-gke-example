@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kephenk-com-tls
+spec:
+  secretName: kephenk-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: kephenk.com
+  dnsNames:
+    - kephenk.com
+    - www.kephenk.com
